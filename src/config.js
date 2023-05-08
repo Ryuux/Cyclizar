@@ -8,8 +8,6 @@ const CLIENT_OPTIONS = {
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMembers,
     GatewayIntentBits.GuildEmojisAndStickers,
-    GatewayIntentBits.GuildInvites,
-    GatewayIntentBits.GuildPresences,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
   ],
@@ -19,7 +17,14 @@ const CLIENT_OPTIONS = {
     Partials.CHANNEL,
     Partials.GUILD_MEMBER,
     Partials.MESSAGE,
-  ]
+  ],
+  presence: {
+    activities: [{
+      name: '<3',
+      type: 0
+    }],
+    status: 'dnd'
+  }
 }
 
 module.exports = { CHANNEL_ID, MESSAGE_WELCOME, CLIENT_OPTIONS }
